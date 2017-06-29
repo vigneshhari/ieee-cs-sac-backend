@@ -6,7 +6,7 @@ from django.db import models
 
 class contact(models.Model):
     name = models.CharField(max_length = 500)
-    phno = models.IntegerField()
+    phno = models.CharField(max_length = 20)
     email = models.CharField(max_length=500)
     message = models.CharField(max_length=10000)
     time = models.DateField()
