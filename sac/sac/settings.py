@@ -16,9 +16,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
-)
 
 STATIC_ROOT= "staticfiles"
 STATIC_URL = 'static'
@@ -48,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +63,7 @@ ROOT_URLCONF = 'sac.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS':    os.path.join(BASE_DIR, 'templates'),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -94,10 +92,10 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd7sumlgl2ovmpg',
-        'USER': 'gncunxinnnspnm',
-        'PASSWORD': 'qt6f1RKkDS7U8L0sCeK3AqM4mW',
-        'HOST': 'ec2-54-243-207-17.compute-1.amazonaws.com',
+        'NAME': 'd9qa35g8klavhn',
+        'USER': 'nmphxecmyvrprv',
+        'PASSWORD': 'a4a3cdd2639f94c00e65a7a5271e6e0da74ff56ce0cee1f3e446eee803fd744e',
+        'HOST': 'ec2-174-129-224-33.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
