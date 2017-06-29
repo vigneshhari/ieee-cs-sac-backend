@@ -12,4 +12,4 @@ class contact(models.Model):
     time = models.DateField()
 
     def __str__(self):
-        return "Name = " + self.name + " Says " + self.message[:50]
+        return self.name + " Says " + self.message[:50]
